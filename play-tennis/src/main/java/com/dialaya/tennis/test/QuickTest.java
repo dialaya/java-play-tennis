@@ -14,13 +14,13 @@ public class QuickTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Match m = new Match("A", "B");
+		String[] players = new String[] {"A","B"};
+		Match m = new Match(players[0], players[1]);
 		m.play();
 		
 		int i = 0;
-		String[] players = new String[] {"A","B"};
 		
-		while(i++ < 1000) {
+		while(i++ < 10000 && m.isInProgress()) {
 			int idx = new Random().nextInt(players.length);
 			String serviceWinner = players[idx];
 			

@@ -118,7 +118,11 @@ public class Match implements Constants, SetObserver{
 		return false;
 	}
 	
-	private boolean isInProgress() {
+	/**
+	 * Check if the match is in progress state
+	 * @return true if it is in progress false otherwise
+	 */
+	public boolean isInProgress() {
 		return MATCH_STATUS_INPROGRESS.equalsIgnoreCase(matchStatus);
 	}
 
